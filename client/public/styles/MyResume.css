@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12pt;
+
+    background: rgb(249, 249, 249);
+    background: radial-gradient(
+  circle,
+  rgba(255, 238, 219, 1) 0%,
+  rgba(255, 153, 102, 1) 49%,
+  rgba(255, 94, 98, 1) 100%
+);
+    /* background-image: url(./tiles/tile23.jpg); */
+    background-attachment: fixed;
+}
+
+* {
+    margin: 0px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0.5cm;
+    margin: 0.5cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+
+* {
+    transition: all .2s;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.pr {
+    padding-right: 30px;
+}
+
+.pd-table td {
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}

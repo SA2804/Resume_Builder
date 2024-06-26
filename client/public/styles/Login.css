@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  background: rgb(255, 238, 219);
+  background: radial-gradient(
+    circle,
+    rgba(255, 238, 219, 1) 0%,
+    rgba(255, 153, 102, 1) 49%,
+    rgba(255, 94, 98, 1) 100%
+  );
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
