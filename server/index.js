@@ -4,11 +4,12 @@ import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken";
 import { uuid } from "uuidv4";
 import cors from "cors";
-import { port, db } from "./config.js";
+import { db } from "./config.js";
 import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 const saltRounds = 10;
 app.use(cors());
 app.use(express.json());
