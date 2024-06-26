@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken";
 import { uuid } from "uuidv4";
 import cors from "cors";
-import { db } from "./config.js";
+import db from "./config.js"
 import dotenv from "dotenv";
 dotenv.config();
 
