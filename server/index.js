@@ -6,18 +6,25 @@ import { uuid } from "uuidv4";
 import cors from "cors";
 import db from "./config.js"
 import dotenv from "dotenv";
+
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000 || process.env.PORT;
 const saltRounds = 10;
 app.use(cors());
 app.use(express.json());
 
-app.listen(port, () => {
-  console.log(`Server is up and running at port ${port}`);
-  db.connect().then(() => console.log("Connected to dB"));
-});
+db.connect()
+  .then(() => {
+    console.log("Connected to database");
+    app.listen(port, () => {
+      console.log(`Server is up and running at port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Error connecting to database:", err.message);
+  });
 
 //                                      Routes:
 // Fetching all data from resp tables:
